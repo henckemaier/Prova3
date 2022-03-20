@@ -15,25 +15,27 @@ namespace ClubeDaLeitura
             Console.WriteLine("Gerenciamento de Emprestimos");
             Console.ResetColor();
             Console.WriteLine();
-            Console.WriteLine("1 -> Cadastrar");
-            Console.WriteLine("2 -> Listar");
-            Console.WriteLine("3 -> Exlcluir");
+            Console.WriteLine("[1] Cadastrar");
+            Console.WriteLine("[2] Listar");
+            Console.WriteLine("[3] Excluir");
             Console.WriteLine();
-            Console.WriteLine("0 -> Sair");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("[s] Sair");
+            Console.ResetColor();
             Console.WriteLine();
-            Console.Write("Opção: ");
+            Console.Write("Digite o Comando: ");
 
-            int opcao = Convert.ToInt32(Console.ReadLine());
+            string opcao = Console.ReadLine();
 
-            if (opcao == 0)
+            if (opcao == "s")
             {
                 Environment.Exit(0);
             }
-            else if (opcao == 1)
+            else if (opcao == "1")
             {
                 RegistrarEmprestimo.Apresentar();
             }
-            else if (opcao == 2)
+            else if (opcao == "2")
             {
                 ListaEmprestimo.Apresentar();
             }

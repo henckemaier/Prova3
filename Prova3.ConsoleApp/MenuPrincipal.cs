@@ -19,9 +19,9 @@ namespace ClubeDaLeitura
 
                 string logo = "─▄▀─▄▀ \n" +
                               "──▀──▀ \n" +
-                             "█▀▀▀▀▀█▄\n" +
-                             "█░░░░░█─█\n" +
-                             "▀▄▄▄▄▄▀▀\n";
+                              "█▀▀▀▀▀█▄\n" +
+                              "█░░░░░█─█\n" +
+                              "▀▄▄▄▄▄▀▀\n";
 
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(logo);
@@ -31,15 +31,17 @@ namespace ClubeDaLeitura
                 Console.WriteLine("Clube do Livro");
                 Console.ResetColor();
                 Console.WriteLine();
-                Console.WriteLine("Digite 1 para ver amigos");
+                Console.WriteLine("[1] Ver amigos");
 
-                Console.WriteLine("Digite 2 para revistas");
+                Console.WriteLine("[2] Ver revistas");
 
-                Console.WriteLine("Digite 3 para emprestimos");
+                Console.WriteLine("[3] Ver emprestimos");
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Digite s para sair");
+                Console.WriteLine("[s] Sair");
                 Console.ResetColor();
+                Console.WriteLine();
+                Console.Write("Digite o Comando: ");
 
                 if (opcao == "1")
                 {

@@ -14,6 +14,7 @@ namespace ClubeDaLeitura
         public string CorCaixa;
         public string EtiquetaCaixa;
         public int NumCaixa;
+        public string OpcaoCategoria;
         public static List<Revista> RevistaList = new List<Revista>();
 
         public static void AdicionarRevista(Revista revista)
@@ -33,10 +34,11 @@ namespace ClubeDaLeitura
                 Console.WriteLine(revista.ObterInformacao());
             }
         }
+
         public string ObterInformacao()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            return "======================" + "\n" + 
+            return
+                "======================" + "\n" + 
                 "------Revista-------" + "\n" + 
                 "Tipo: " + Tipo + "\n" + 
                 "Edição: " + Edicao + "\n" + 
@@ -44,9 +46,10 @@ namespace ClubeDaLeitura
                 "------Caixa-------" + "\n" + 
                 "Cor da Caixa: " + CorCaixa + "\n" +
                 "Etiqueta da Caixa: " + EtiquetaCaixa + "\n" + 
-                "Numero da Caixa: " + NumCaixa + "\n" + 
+                "Numero da Caixa: " + NumCaixa + "\n" +
+                "-----Categoria-----" + "\n" +
+                "Categoria: " + OpcaoCategoria + "\n" +
                 "======================" + "\n";
-
         }
     }
 }

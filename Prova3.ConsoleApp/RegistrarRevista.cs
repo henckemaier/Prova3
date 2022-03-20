@@ -30,16 +30,50 @@ namespace ClubeDaLeitura
             Console.WriteLine("Insira o numero da caixa: ");
             int numCaixa = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Insira a categoria da revista: ");
+            Console.WriteLine("[1] Novidade");
+            Console.WriteLine("[2] Bom estado");
+            Console.WriteLine("[3] Antiga");
+            string opcaoCategoria = Console.ReadLine();
+
             Revista revista = new Revista();
 
-            revista.Tipo = tipo;
-            revista.Edicao = edicao;
-            revista.Ano = ano;
-            revista.CorCaixa = corCaixa;
-            revista.EtiquetaCaixa = etiquetaCaixa;
-            revista.NumCaixa = numCaixa;
+            if(opcaoCategoria == "1")
+            {
+                revista.Tipo = tipo;
+                revista.Edicao = edicao;
+                revista.Ano = ano;
+                revista.CorCaixa = corCaixa;
+                revista.EtiquetaCaixa = etiquetaCaixa;
+                revista.NumCaixa = numCaixa;
+                revista.OpcaoCategoria = "Novidade";
 
-            Revista.AdicionarRevista(revista);
+                Revista.AdicionarRevista(revista);
+            }
+            else if (opcaoCategoria == "2")
+            {
+                revista.Tipo = tipo;
+                revista.Edicao = edicao;
+                revista.Ano = ano;
+                revista.CorCaixa = corCaixa;
+                revista.EtiquetaCaixa = etiquetaCaixa;
+                revista.NumCaixa = numCaixa;
+                revista.OpcaoCategoria = "Bom estado";
+
+                Revista.AdicionarRevista(revista);
+            }
+            else if (opcaoCategoria == "3")
+            {
+                revista.Tipo = tipo;
+                revista.Edicao = edicao;
+                revista.Ano = ano;
+                revista.CorCaixa = corCaixa;
+                revista.EtiquetaCaixa = etiquetaCaixa;
+                revista.NumCaixa = numCaixa;
+                revista.OpcaoCategoria = "Antiga";
+
+                Revista.AdicionarRevista(revista);
+            }
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Revista cadastrada!");

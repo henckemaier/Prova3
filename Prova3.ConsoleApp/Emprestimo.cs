@@ -12,6 +12,7 @@ namespace ClubeDaLeitura
         public string RevistaEmprestada;
         public DateTime DataEmprestimo;
         public DateTime DataDevolucao;
+        public string OpcaoDeResultado;
         public static List<Emprestimo> EmprestimoList = new List<Emprestimo>();
 
         public static void AdicionarEmprestimo(Emprestimo emprestimo)
@@ -37,7 +38,7 @@ namespace ClubeDaLeitura
             return "-------------------------------" + "\n" +
                "Pessoa emprestada: " + AmigoEmprestimo + "\n" +
                "Revista emprestada: " + RevistaEmprestada + "\n" +
-               "Data do emprestimo: " + DataEmprestimo.ToString("dd/MM/yyyy") + "\n" +
+               "Data do " + OpcaoDeResultado + ": " + DataEmprestimo.ToString("dd/MM/yyyy") + "\n" +
                "Data de devolução: " + DataDevolucao.ToString("dd/MM/yyyy") + "\n";
         }
     }
